@@ -116,3 +116,7 @@ func (s String) IsZero() bool {
 func (s String) Equal(other String) bool {
 	return s.Valid == other.Valid && (!s.Valid || s.String == other.String)
 }
+
+func (s *String) Scan(value interface{}) error {
+	return nil
+}

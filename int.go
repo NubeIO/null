@@ -142,3 +142,7 @@ func (i Int) IsZero() bool {
 func (i Int) Equal(other Int) bool {
 	return i.Valid == other.Valid && (!i.Valid || i.Int64 == other.Int64)
 }
+
+func (i *Int) Scan(value interface{}) error {
+	return nil
+}

@@ -154,3 +154,7 @@ func (f Float) IsZero() bool {
 func (f Float) Equal(other Float) bool {
 	return f.Valid == other.Valid && (!f.Valid || f.Float64 == other.Float64)
 }
+
+func (f *Float) Scan(value interface{}) error {
+	return nil
+}

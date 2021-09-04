@@ -138,3 +138,7 @@ func (t Time) Equal(other Time) bool {
 func (t Time) ExactEqual(other Time) bool {
 	return t.Valid == other.Valid && (!t.Valid || t.Time == other.Time)
 }
+
+func (t *Time) Scan(value interface{}) error {
+	return nil
+}

@@ -128,3 +128,7 @@ func (b Bool) IsZero() bool {
 func (b Bool) Equal(other Bool) bool {
 	return b.Valid == other.Valid && (!b.Valid || b.Bool == other.Bool)
 }
+
+func (b *Bool) Scan(value interface{}) error {
+	return nil
+}
